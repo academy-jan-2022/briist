@@ -1,19 +1,24 @@
 package actions;
 
+import model.NotificationService;
 import model.demand.Demand;
-import model.ice_cream_van.Van;
+import model.demand.DemandService;
+import model.ice_cream_van.IceCreamVan;
+import model.ice_cream_van.VanService;
 
 public class AcceptDemand {
-    // mark demand as in progress
-    // mark van as busy so won't receive more notification of demands
     Demand demand;
-    Van van;
+    IceCreamVan iceCreamVan;
 
-    public void markDemandAsInProgres(){
-
+    public void markDemandAsInProgress(){
+        DemandService.accept(demand);
     }
 
     public void markVanAsBusy(){
+        VanService.setToBusy(iceCreamVan);
+    }
 
+    public void notifyUser() {
+        NotificationService.notify(demand.customerName(), "your request has been accepted");
     }
 }

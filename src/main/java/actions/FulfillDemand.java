@@ -1,20 +1,25 @@
 package actions;
 
+import model.NotificationService;
 import model.demand.Demand;
-import model.ice_cream_van.Van;
+import model.demand.DemandService;
+import model.ice_cream_van.IceCreamVan;
+import model.ice_cream_van.VanService;
 
 public class FulfillDemand {
-    // mark demand as completed
-    // mark van as not busy so they will receive more notification of demands
     Demand demand;
-    Van van;
+    IceCreamVan iceCreamVan;
 
     public void markDemandAsComplete() {
-
+        DemandService.fulfill(demand);
     }
 
     public void markVanAsAvailable() {
+        VanService.markAsAvailable(iceCreamVan);
+    }
 
+    public void notifyVanDriver() {
+        NotificationService.notify(iceCreamVan.driverName(), "this request has now been fulfilled");
     }
 }
 

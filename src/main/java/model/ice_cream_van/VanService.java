@@ -4,11 +4,22 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class VanService {
-    VanRepository vanRepository;
+    static VanRepository vanRepository;
 
-    public static List<Van> getVansWithinRange(Location currentLocation) {
-        List<Van> allVans = vanRepository.getAllVans();
-        return allVans.stream().filter(van -> van.location() == currentLocation).collect(Collectors.toList());
+    public VanService(VanRepository vanRepository) {
+        this.vanRepository = vanRepository;
     }
 
+    public static void markAsAvailable(IceCreamVan iceCreamVan) {
+
+    }
+
+    public static List<IceCreamVan> getVansWithinRange(Location currentLocation) {
+        List<IceCreamVan> allIceCreamVans = vanRepository.getAllVans();
+        return allIceCreamVans.stream().filter(van -> van.location() == currentLocation).collect(Collectors.toList());
+    }
+
+    public static void setToBusy(IceCreamVan iceCreamVan) {
+        vanRepository.setVanToBusy(iceCreamVan);
+    }
 }

@@ -4,12 +4,17 @@ import java.util.List;
 
 public class VanRepositoryInMemory implements VanRepository{
     @Override
-    public List<Van> getAllVans() {
+    public List<IceCreamVan> getAllVans() {
         return null;
     }
 
     @Override
-    public List<Van> getVansWithinRange(Location currentLocation) {
+    public List<IceCreamVan> getVansWithinRange(Location currentLocation) {
         return null;
+    }
+
+    @Override
+    public void setVanToBusy(IceCreamVan iceCreamVan) {
+
     }
 }
