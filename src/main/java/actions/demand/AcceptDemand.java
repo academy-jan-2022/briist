@@ -1,17 +1,18 @@
-package actions;
+package actions.demand;
 
-import model.NotificationService;
+import services.NotificationService;
 import model.demand.Demand;
-import model.demand.DemandService;
 import model.ice_cream_van.IceCreamVan;
-import model.ice_cream_van.VanService;
+import services.VanService;
+
+import static services.DemandService.accept;
 
 public class AcceptDemand {
     Demand demand;
     IceCreamVan iceCreamVan;
 
     public void markDemandAsInProgress(){
-        DemandService.accept(demand);
+        accept(demand);
     }
 
     public void markVanAsBusy(){

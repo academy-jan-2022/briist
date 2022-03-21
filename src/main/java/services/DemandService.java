@@ -1,13 +1,14 @@
-package model.demand;
+package services;
 
-import model.NotificationService;
+import model.demand.Demand;
+import model.demand.DemandRepository;
 import model.ice_cream_van.IceCreamVan;
 
 import java.util.List;
 
 public class DemandService {
 
-    static DemandRepository demandRepository;
+    private static DemandRepository demandRepository;
 
     public DemandService(DemandRepository demandRepository) {
         this.demandRepository = demandRepository;
@@ -20,14 +21,13 @@ public class DemandService {
 
 
     private static void notifyFleet(List<IceCreamVan> iceCreamVans) {
-        for (IceCreamVan iceCreamVan : iceCreamVans
-             ) {
+        for (IceCreamVan iceCreamVan : iceCreamVans) {
             NotificationService.notify(iceCreamVan.driverName(), "New demand in your area");
         }
     }
 
     private static void addDemandToRepository(Demand demand){
-
+        demandRepository.add(demand);
     }
 
     public static void accept(Demand demand) {

@@ -1,4 +1,8 @@
-package model.ice_cream_van;
+package services;
+
+import model.ice_cream_van.IceCreamVan;
+import model.ice_cream_van.Location;
+import model.ice_cream_van.VanRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,8 +19,7 @@ public class VanService {
     }
 
     public static List<IceCreamVan> getVansWithinRange(Location currentLocation) {
-        List<IceCreamVan> allIceCreamVans = vanRepository.getAllVans();
-        return allIceCreamVans.stream().filter(van -> van.location() == currentLocation).collect(Collectors.toList());
+        return vanRepository.getVansWithinRange(currentLocation);
     }
 
     public static void setToBusy(IceCreamVan iceCreamVan) {

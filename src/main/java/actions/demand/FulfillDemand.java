@@ -1,10 +1,10 @@
-package actions;
+package actions.demand;
 
-import model.NotificationService;
+import services.NotificationService;
 import model.demand.Demand;
-import model.demand.DemandService;
+import services.DemandService;
 import model.ice_cream_van.IceCreamVan;
-import model.ice_cream_van.VanService;
+import services.VanService;
 
 public class FulfillDemand {
     Demand demand;
