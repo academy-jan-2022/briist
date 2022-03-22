@@ -12,14 +12,14 @@ public class AcceptDemand {
     IceCreamVan iceCreamVan;
 
     public void markDemandAsInProgress(){
-        accept(demand);
+
     }
 
     public void markVanAsBusy(){
-        VanService.setToBusy(iceCreamVan);
+
     }
 
     public void notifyUser() {
-        NotificationService.notify(demand.customerName(), "your request has been accepted");
+
     }
 }

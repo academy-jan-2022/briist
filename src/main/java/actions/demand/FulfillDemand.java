@@ -11,15 +11,15 @@ public class FulfillDemand {
     IceCreamVan iceCreamVan;
 
     public void markDemandAsComplete() {
-        DemandService.fulfill(demand);
+
     }
 
     public void markVanAsAvailable() {
-        VanService.markAsAvailable(iceCreamVan);
+
     }
 
     public void notifyVanDriver() {
-        NotificationService.notify(iceCreamVan.driverName(), "this request has now been fulfilled");
+
     }
 }
 

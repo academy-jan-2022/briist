@@ -11,7 +11,7 @@ public class VanService {
     static VanRepository vanRepository;
 
     public VanService(VanRepository vanRepository) {
-        this.vanRepository = vanRepository;
+
     }
 
     public static void markAsAvailable(IceCreamVan iceCreamVan) {
@@ -19,10 +19,10 @@ public class VanService {
     }
 
     public static List<IceCreamVan> getVansWithinRange(Location currentLocation) {
-        return vanRepository.getVansWithinRange(currentLocation);
+      return null;
     }
 
     public static void setToBusy(IceCreamVan iceCreamVan) {
-        vanRepository.setVanToBusy(iceCreamVan);
+
     }
 }
