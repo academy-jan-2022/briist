@@ -12,14 +12,14 @@ public class AcceptDemand {
     IceCreamVan iceCreamVan;
 
     public void markDemandAsInProgress(){
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     public void markVanAsBusy(){
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     public void notifyUser() {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 }

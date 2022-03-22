@@ -11,18 +11,18 @@ public class VanService {
     static VanRepository vanRepository;
 
     public VanService(VanRepository vanRepository) {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     public static void markAsAvailable(IceCreamVan iceCreamVan) {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     public static List<IceCreamVan> getVansWithinRange(Location currentLocation) {
-      return null;
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     public static void setToBusy(IceCreamVan iceCreamVan) {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 }

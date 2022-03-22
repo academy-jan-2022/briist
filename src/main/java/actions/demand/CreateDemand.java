@@ -12,15 +12,15 @@ public class CreateDemand {
     Demand newDemand;
 
     public CreateDemand(Location currentLocation, String userName, int numberOfPeople, String dietaryRequirements) {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
-    private List<IceCreamVan> getVansWithinRange(){
-        return null;
+    private List<IceCreamVan> getVansWithinRange() {
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     public void process() {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
 }

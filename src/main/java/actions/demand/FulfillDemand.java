@@ -11,15 +11,15 @@ public class FulfillDemand {
     IceCreamVan iceCreamVan;
 
     public void markDemandAsComplete() {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     public void markVanAsAvailable() {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     public void notifyVanDriver() {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 }
 

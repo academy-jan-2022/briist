@@ -5,16 +5,16 @@ import java.util.List;
 public class VanRepositoryInMemory implements VanRepository{
     @Override
     public List<IceCreamVan> getAllVans() {
-        return null;
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     @Override
     public List<IceCreamVan> getVansWithinRange(Location currentLocation) {
-        return null;
+        throw new UnsupportedOperationException("not yet implemented");
     }
 
     @Override
     public void setVanToBusy(IceCreamVan iceCreamVan) {
-
+        throw new UnsupportedOperationException("not yet implemented");
     }
 }
